@@ -1,0 +1,10 @@
+ SELECT id,name,stageName,amount from opportunity where stageName='Closed Won' AND Amount>=35000 
+3.1
+SELECT id, name, account.name from contact order by LastName desc
+3.2
+SELECT id, name , (select id , name, stagename from opportunities where StageName != 'Closed Lost ' ) from account 
+3.3
+SELECT id,name,amount from opportunity order by amount desc limit 10 
+3.4
+SELECT id,name,amount from opportunity where stagename!='Closed Won' or stagename!='Closed Lost' order by amount limit 20
+3.5
